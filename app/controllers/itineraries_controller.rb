@@ -1,5 +1,6 @@
 class ItinerariesController < ApplicationController
   before_action :set_itinerary, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /itineraries
   # GET /itineraries.json
