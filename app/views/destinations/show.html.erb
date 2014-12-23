@@ -6,7 +6,8 @@
 <p>
   <h1><%= @destination.name %></h1>
 </p>
-
+<center>
+  <%= image_tag "StockBVI.png", class:"stockimage img-responsive" %></center>
 <%# select_tag :category, options_for_select(Category.all.collect{|c| [c.name, c.id] }) %>
 <%# submit_tag("Go") %>
 <ul><div class="the-categories">
@@ -27,6 +28,7 @@
 <br>
 
 <div class = "destination-edit-back" >
-<%= link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %>
+<%link_to 'Edit', edit_destination_path(@destination), class: "btn btn-default" %>
+
 <%= link_to 'Back', destinations_path, class: "btn btn-default" %></div>
 </div>

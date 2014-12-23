@@ -1,6 +1,9 @@
 class PoisController < ApplicationController
   before_action :set_poi, only: [:show, :edit, :update, :destroy]
   before_action :check_admin, except: [:show, :index]
+  # before_action :authenticate_user!
+
+   
 
   # GET /pois
   # GET /pois.json

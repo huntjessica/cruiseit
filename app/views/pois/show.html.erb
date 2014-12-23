@@ -35,14 +35,7 @@
         <div class="field">
           <%= f.hidden_field :poi_id, :value => @poi.id %>
         </div>
-          <%= f.collection_select :itinerary_id,  current_user.itineraries, :id, :name %>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-        <% if current_user.admin? %>
-           <%= render 'categories', poi: @poi %>
-           <%= link_to 'Edit', edit_poi_path(@poi), class: "btn btn-default" %> |
-        <% end %>
+         
             <%= link_to 'Back', :back, class: "btn btn-default"  %>
   </div>
           <% end %>
@@ -58,9 +51,7 @@
     <br>
         <% @poi.categories.each do |category| %>
           <%= category.name %>
-              <% if current_user.admin? %>
-                    <%= link_to 'Remove Category', category.of_this(@poi) , method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% end %>
+              
              <br>
         <% end %> 
   </div> 
