@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   has_many :itineraries
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
 end
