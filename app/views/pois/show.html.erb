@@ -69,16 +69,23 @@
 <div class="navionics" data-root ="http://webapiv2.navionics.com/dist/webapi/images" >
    <div class="test_map_div" ></div>
     <script>
-        // $(document).on("ready page:load", function( ) {
-            var webapi = new JNC.Views.BoatingNavionicsMap({
-                tagId: '.test_map_div',
-                center: [  -64.5431, 18.4456 ],
-                zoom: 8,
-                navKey: 'Navionics_webapi_00500'
-            });
-            webapi.setDistanceUnit(JNC.DISTANCE_UNIT.KILOMETERS);
-            webapi.showSonarControl(false);
-        // })
+
+    var virgin_gorda = new google.maps.LatLng(-64.5431, 18.4456);
+var gMapNauticalOptions = {
+    zoom: 8,
+    center: virgin_gorda,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+// Creation of  Google Map Engine
+var gMapNautical = new google.maps.Map(document.getElementById("nautical-map-container"), gMapNauticalOptions);
+
+//Navionics NauticalChart
+var navionics_nauticalchart_layer = new JNC.Views.gNavionicsOverlay({
+    navKey: "'Navionics_webapi_00500",
+    chartType: JNC.Views.gNavionicsOverlay.CHARTS.NAUTICAL
+});
+
+
     </script>
     </div>
   </div>
