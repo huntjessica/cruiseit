@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'httparty'
+gem 'pry-rails'
 gem 'rails_12factor',            group: :production
 
 
