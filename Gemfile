@@ -16,9 +16,11 @@ gem 'httparty'
 gem 'pry-rails'
 gem 'rails_12factor',            group: :production
 
-
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
 gem 'spring',        						 group: :development
-gem 'better_errors'
-gem 'binding_of_caller'
+
+group :test, :development do
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	gem 'rspec-rails', '~> 3.0.0'
+end
