@@ -5,8 +5,8 @@
 <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Lato|Oswald' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
   <script>
@@ -65,14 +65,14 @@
         <% end %>
       </ul>
 
-   
+
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <!-- </div> -->
 <!-- </div> -->
-<!-- 
+<!--
 <div class="container"> -->
   <%= yield %>
 <!-- </div> -->
