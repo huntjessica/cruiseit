@@ -6,8 +6,8 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" >
     <link rel="stylesheet" href="http://openlayers.org/en/v3.0.0/css/ol.css" >
-     <script type="text/javascript" src="http://webapiv2.navionics.com/dist/webapi/webapi.min.no-dep.js"></script>
-    <!-- <link rel="stylesheet" href="http://webapiv2.navionics.com/dist/webapi/webapi.min.css" > -->
+    <script type="text/javascript" src="http://webapiv2.navionics.com/dist/webapi/webapi.min.no-dep.js"></script>
+    <link rel="stylesheet" href="http://webapiv2.navionics.com/dist/webapi/webapi.min.css" >
 
 <div class="poi-show">
 <p>
@@ -66,26 +66,18 @@
 <h3> Navionics Map</h3>
 <br>
 
-<div class="navionics" data-root ="http://webapiv2.navionics.com/dist/webapi/images" >
+<body data-root="http://webapiv2.navionics.com/dist/webapi/images" >
    <div class="test_map_div" ></div>
     <script>
-
-    var virgin_gorda = new google.maps.LatLng(-64.5431, 18.4456);
-var gMapNauticalOptions = {
-    zoom: 8,
-    center: virgin_gorda,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-// Creation of  Google Map Engine
-var gMapNautical = new google.maps.Map(document.getElementById("nautical-map-container"), gMapNauticalOptions);
-
-//Navionics NauticalChart
-var navionics_nauticalchart_layer = new JNC.Views.gNavionicsOverlay({
-    navKey: "'Navionics_webapi_00500",
-    chartType: JNC.Views.gNavionicsOverlay.CHARTS.NAUTICAL
-});
-
-
+        // $(document).on("ready page:load", function( ) {
+            var webapi = new JNC.Views.BoatingNavionicsMap({
+                tagId: '.test_map_div',
+                center: [  -64.5431, 18.4456 ],
+                zoom: 8,
+                navKey: 'Navionics_webapi_00500'
+            });
+            webapi.showSonarControl(false);
+        // })
     </script>
     </div>
   </div>
