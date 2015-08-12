@@ -5,16 +5,22 @@ ruby '2.2.2'
 gem 'pg'
 
 
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 gem 'devise'
 gem 'httparty'
 gem 'jquery-rails'
 gem 'pry-rails'
-gem 'rails_12factor',            group: :production
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails',                require: false
 gem 'uglifier', '>= 1.3.0'
 
-gem 'spring',        						 group: :development
+
+group :production do
+	gem 'rails_12factor'
+end
+
+group :development do
+	gem 'spring'
+end
 
 group :test, :development do
 	gem 'better_errors'
