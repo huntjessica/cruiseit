@@ -10,7 +10,7 @@ gem 'devise'
 gem 'httparty'
 gem 'jquery-rails'
 gem 'pry-rails'
-gem 'sass-rails',                require: false
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 
 
