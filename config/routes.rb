@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
   get 'index', to: 'pages#index', as: 'index'
-  
   get 'pages/index'
 
   devise_for :users
@@ -13,10 +12,10 @@ Rails.application.routes.draw do
 
   resources :pois
 
-  resources :destinations do 
+  resources :destinations do
     resources :pois
   end
-  
+
   resources :category_pois, only: [:create, :destroy]
 
   resources :itinerary_items
