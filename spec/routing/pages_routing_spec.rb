@@ -1,6 +1,4 @@
-require 'rails_helper'
-
-RSpec.describe 'routes for the home page', type: :routing do
+RSpec.describe 'Routes for the home page' do
   it 'routes to /' do
     expect(get: '/').to be_routable
   end
